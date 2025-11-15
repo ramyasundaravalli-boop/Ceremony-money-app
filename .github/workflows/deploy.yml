@@ -1,1 +1,16 @@
+name: Simple Deployment
 
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Simple deploy message
+      run: echo "Hello! I'm deploying your website!"
